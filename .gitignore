@@ -3,8 +3,6 @@ quokka.ts
 ./quokka.ts
 carenet-key.json
 
-src/**/*.js
-
 # Created by .ignore support plugin (hsz.mobi)
 ### VisualStudioCode template
 .vscode
