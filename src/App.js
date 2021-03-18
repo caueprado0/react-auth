@@ -7,9 +7,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
   return (
-    <div className="container-fluid p-0 w-100 vh-100">
-      <Routes />
-      <GlobalStyles />
+    <div className="d-flex min-h-100 justify-content-center align-items-center">
+      <div className="d-block w-100">
+        <div className="d-flex justify-content-center align-items-center">
+          <Routes />
+          <GlobalStyles />
+        </div>
+      </div>
     </div>
   );
 }
