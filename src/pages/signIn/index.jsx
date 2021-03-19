@@ -4,6 +4,7 @@ import SignImage from "src/components/signImage";
 import SignForm from "src/components/signForm";
 import signInFigure from "src/styles/assets/signin-image.jpeg";
 import SignFormGroup from "src/components/signFormGroup";
+import SignCheckbox from "src/components/signCheckbox";
 
 export default function signIn() {
   return (
@@ -20,6 +21,7 @@ export default function signIn() {
               >
                 Seu nome de usuário
               </SignFormGroup>
+
               <SignFormGroup
                 id="password"
                 type="password"
@@ -29,14 +31,7 @@ export default function signIn() {
               >
                 Sua senha
               </SignFormGroup>
-              <SignFormGroup
-                id="remember-me"
-                invertedComponents={true}
-                type="checkbox"
-                label={{
-                  value: "Lembre-me",
-                }}
-              />
+              <SignCheckbox id="remember-me">Lembre-me</SignCheckbox>
             </SignForm>
           </div>
           <div className="col-lg-6 col-md-12 p-0 mt-4 mt-lg-0">
