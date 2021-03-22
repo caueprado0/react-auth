@@ -1,9 +1,9 @@
-import { connect } from "../../database";
-import user from "../model";
+const { connect } = require("../../database");
+const user = require("../model");
 
-module.exports = async function (event) {
+module.exports = async (event) => {
   try {
-    await connect();
+    await connect;
     const body = JSON.parse(event.body);
 
     const result = user

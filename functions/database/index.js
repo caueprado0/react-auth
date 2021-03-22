@@ -13,18 +13,18 @@ const url = process.env.MONGODB_URL
   ? process.env.MONGODB_URL
   : `mongodb://${host}:${port}/${database}`;
 
-exports.connect = async () => {
-  await MongoConnect(
-    url,
-    pickBy(
-      {
-        user: process.env.MONGODB_USERNAME || null,
-        pass: process.env.MONGODB_PASSWORD || null,
-        useNewUrlParser: true,
-        useCreateIndex: true,
-        useFindAndModify: false,
-      },
-      null
-    )
-  );
-};
+const connect = MongoConnect(
+  url,
+  pickBy(
+    {
+      user: process.env.MONGODB_USERNAME || null,
+      pass: process.env.MONGODB_PASSWORD || null,
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+    },
+    null
+  )
+);
+
+module.exports = { connect };
