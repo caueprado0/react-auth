@@ -1,7 +1,7 @@
 const { connect } = require("../../database");
 const user = require("../model");
 
-const create = async (event) => {
+module.exports = async (event) => {
   try {
     await connect;
     const body = JSON.parse(event.body);
@@ -31,5 +31,3 @@ const create = async (event) => {
     };
   }
 };
-
-module.exports = { create };

@@ -1,4 +1,4 @@
-// const { create } = require("./crud");
+const create = require("./crud");
 
 exports.handler = async (event) => {
   const { httpMethod = "GET" } = event;
@@ -6,8 +6,7 @@ exports.handler = async (event) => {
     case "GET":
       return { statusCode: 200, body: JSON.stringify({}) };
     case "POST":
-      // return create(event);
-      return { statusCode: 202, body: JSON.stringify({}) };
+      return create(event);
     default:
       return {
         statusCode: 405,
