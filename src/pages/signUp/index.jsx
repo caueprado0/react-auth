@@ -49,7 +49,7 @@ export default function signUp() {
                   content: "lock",
                 }}
               >
-                Senha
+                Repita sua Senha
               </SignFormGroup>
               <SignCheckbox id="agree-term">
                 Eu concordo com todos os Termos de Serviço
