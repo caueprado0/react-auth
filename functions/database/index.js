@@ -1,7 +1,7 @@
-import { connect as MongoConnect } from "mongoose";
-import * as DotEnv from "dotenv";
-import packageJson from "pjson";
-import pickBy from "lodash.pickby";
+const { connect: MongoConnect } = require("mongoose");
+const DotEnv = require("dotenv");
+const packageJson = require("pjson");
+const pickBy = require("lodash.pickby");
 
 DotEnv.config();
 
@@ -13,7 +13,7 @@ const url = process.env.MONGODB_URL
   ? process.env.MONGODB_URL
   : `mongodb://${host}:${port}/${database}`;
 
-export const connect = async () => {
+exports.connect = async () => {
   await MongoConnect(
     url,
     pickBy(
