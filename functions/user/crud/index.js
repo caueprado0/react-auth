@@ -1,7 +1,7 @@
-import { connect } from "../database";
-import user from "./model";
+import { connect } from "../../database";
+import user from "../model";
 
-exports.handler = async function (event) {
+export const create = async function (event) {
   try {
     await connect();
     const body = JSON.parse(event.body);
