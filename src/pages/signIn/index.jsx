@@ -15,6 +15,7 @@ export default function signIn() {
             <SignForm title="Entrar">
               <SignFormGroup
                 id="username"
+                autoComplete="on"
                 label={{
                   content: "person",
                 }}
@@ -25,6 +26,7 @@ export default function signIn() {
               <SignFormGroup
                 id="password"
                 type="password"
+                autoComplete="on"
                 label={{
                   content: "lock",
                 }}
@@ -32,6 +34,9 @@ export default function signIn() {
                 Sua senha
               </SignFormGroup>
               <SignCheckbox id="remember-me">Lembre-me</SignCheckbox>
+              <div className="mt-4">
+                <button className="btn btn-lg btn-primary">Log in</button>
+              </div>
             </SignForm>
           </div>
           <div className="col-lg-6 col-md-12 p-0 mt-4 mt-lg-0">

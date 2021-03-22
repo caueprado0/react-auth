@@ -23,7 +23,7 @@ export default createGlobalStyle`
     border: 0;
     background: none;
     font-family: "Poppins", sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     outline: none;
   }
 
@@ -73,7 +73,7 @@ export default createGlobalStyle`
     font-weight: 500;
   }
 
-  span.material-icons {
+  span.material-icons, span.material-icons-outlined {
     font-size: 18px;
   }
 
@@ -81,6 +81,12 @@ export default createGlobalStyle`
     @media (min-width: 992px) {
       padding-left: 80px !important;
       padding-right: 80px !important;
+    }
+  }
+
+  @media screen and (min-width: 767px) {
+    *, button, input, select, textarea {
+      font-size: 13px;
     }
   }
 
